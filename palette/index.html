@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>CodeJam Canvas</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header--navigation"></div>
+            <div class="header--project_name">CodeJam Canvas</div>
+        </header>
+        <div class="container">
+            <ul class="tools">
+                <li class="tools--item paint_bucket">Paint bucket</li>
+                <li class="tools--item choose_color">Choose color</li>
+                <hr class="line">
+                <li class="tools--item pencil">Pencil</li>
+                <li class="tools--item transform">Transform</li>
+            </ul>
+            <ul class="color">
+                <li class="colors color--item" value="lightgray"><div class="color--spot current_color"></div>Current color</li>
+                <li class="colors color--item" value="lightgray"><div class="color--spot previous_color"></div>Previous color</li>
+                <hr class="line">
+                <li class="colors color--item" value="#FF0000"><div class="color--spot red_color"></div>Red</li>
+                <li class="colors color--item" value="#0000FF"><div class="color--spot blue_color"></div>Blue</li>
+                <li class="color--item"><input type="color" name="color_input" class="colors color_input" value="#000000" id="color_input">
+                    <label for="color_input" class="color_input--label">Choose yours</label>
+                </li>
+            </ul>
+            <canvas class="canvas" width="512" height="512"></canvas>
+            <button class="clear_canvas">Clear Canvas</button>
+            <ul class="field">
+                <li class="field--item one">1x1</li>
+                <li class="field--item four">4x4</li>
+                <li class="field--item sixteen">16x16</li>
+                <li class="field--item thirty_two">32x32</li>
+            </ul>
+        </div>   
+        <script src="https://unpkg.com/fast-average-color/dist/index.min.js"></script> 
+        <script src="./js.js"></script>  
+    </body>
+</html>
